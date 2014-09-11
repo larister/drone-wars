@@ -1,6 +1,13 @@
 define(['Robot', 'Shell', 'Explosion'], function (Robot, Shell, Explosion) {
   'use strict';
 
+  function updateStatus(status){
+    if(!status.length){
+      return;
+    }
+    // debugger;
+  }
+
   function Battlefield(options) {
     var canvas = options.canvas;
 
@@ -229,6 +236,8 @@ define(['Robot', 'Shell', 'Explosion'], function (Robot, Shell, Explosion) {
     }
 
     this.status = status;
+
+    updateStatus(this.robots);
   };
 
   Battlefield.prototype.outOfBounds = function (position) {
